@@ -10,12 +10,14 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 
 import java.util.List;
 
-public class WanderAction extends AbstractGameAction {
-    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("DiscardPileToTopOfDeckAction");
+import static theFishing.FishingMod.makeID;
+
+public class BackpackAction2 extends AbstractGameAction {
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("BackpackAction"));
     public static final String[] TEXT = uiStrings.TEXT;
     private CardGroup targetGroup;
 
-    public WanderAction(CardGroup targetGroup) {
+    public BackpackAction2(CardGroup targetGroup) {
         this.targetGroup = targetGroup;
         this.amount = 1;
         this.duration = this.startDuration = Settings.ACTION_DUR_XFAST;
@@ -29,7 +31,7 @@ public class WanderAction extends AbstractGameAction {
             }
 
             if (targetGroup.size() == 1) {
-                selectedCardsToTopOfDeck(targetGroup.group);
+                moveThoseCardsToHand(targetGroup.group);
                 this.isDone = true;
                 return;
             }
@@ -39,7 +41,7 @@ public class WanderAction extends AbstractGameAction {
         }
 
         if (AbstractDungeon.gridSelectScreen.selectedCards.size() != 0) {
-            selectedCardsToTopOfDeck(AbstractDungeon.gridSelectScreen.selectedCards);
+            moveThoseCardsToHand(AbstractDungeon.gridSelectScreen.selectedCards);
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             AbstractDungeon.player.hand.refreshHandLayout();
             this.isDone = true;
@@ -48,10 +50,11 @@ public class WanderAction extends AbstractGameAction {
         }
     }
 
-    private static void selectedCardsToTopOfDeck(List<AbstractCard> cards) {
+    private static void moveThoseCardsToHand(List<AbstractCard> cards) {
         for (AbstractCard q : cards) {
-            AbstractDungeon.player.drawPile.removeCard(q);
-            AbstractDungeon.player.drawPile.addToTop(q);
+            if (AbstractDungeon.player.drawPile.group.contains(q)) {
+                AbstractDungeon.player.drawPile.moveToHand(q);
+            }
         }
     }
 }
