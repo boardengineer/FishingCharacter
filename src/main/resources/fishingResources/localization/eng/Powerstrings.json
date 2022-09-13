@@ -2,9 +2,9 @@
   "${ModID}:TakeItEasyPower": {
     "NAME": "Fasting-B",
     "DESCRIPTIONS": [
-      "Draw #b",
-      " less card at the start of each turn.",
-      " less cards at the start of each turn."
+      "At the start of your turn, discard #b",
+      " card.",
+      " cards."
     ]
   },
   "${ModID}:DrawLessNextTurnPower": {
@@ -90,8 +90,8 @@
     "NAME": "First Class",
     "DESCRIPTIONS": [
       "At the start of your turn, add #b",
-      " #yFlight into your hand.",
-      " #yFlights into your hand."
+      " #yFoil #yFlight into your hand.",
+      " #yFoil #yFlights into your hand."
     ]
   },
   "${ModID}:ShinyShivPower": {

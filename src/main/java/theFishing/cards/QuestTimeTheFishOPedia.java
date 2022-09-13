@@ -1,29 +1,26 @@
 package theFishing.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theFishing.actions.AcceptQuestAction;
-import theFishing.cards.fish.AbstractFishCard;
 import theFishing.quest.QuestHelper;
 import theFishing.quest.quests.TheFishOPedia;
 
 import static theFishing.FishingMod.makeID;
-import static theFishing.util.Wiz.*;
+import static theFishing.util.Wiz.atb;
 
 public class QuestTimeTheFishOPedia extends AbstractFishingCard {
     public final static String ID = makeID("QuestTimeTheFishOPedia");
     // intellij stuff skill, self, uncommon, , , , , , 
 
     public QuestTimeTheFishOPedia() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 4;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        makeInHand(AbstractFishCard.returnRandomFish());
+        atb(new DrawCardAction(magicNumber));
         atb(new AcceptQuestAction(new TheFishOPedia()));
     }
 
@@ -33,6 +30,6 @@ public class QuestTimeTheFishOPedia extends AbstractFishingCard {
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeMagicNumber(1);
     }
 }
