@@ -106,7 +106,7 @@
   },
   "${ModID}:CardboardBullets": {
     "NAME": "Cardboard Bullets",
-    "DESCRIPTION": "Deal !D! damage. NL Deals 1 less damage for each other card in your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Deals 2 less damage for each other card in your hand."
   },
   "${ModID}:FeedingFrenzy": {
     "NAME": "Feeding Frenzy",
@@ -168,7 +168,7 @@
   },
   "${ModID}:TreasureChest": {
     "NAME": "Treasure Chest",
-    "DESCRIPTION": "Gain !B! Block. NL Draw 1 card. NL Startup: Gain !M! *Gold."
+    "DESCRIPTION": "Add 1 ${ModID}:Fish into your hand. NL Startup: Gain !M! *Gold."
   },
   "${ModID}:Whaling": {
     "NAME": "Whaling",
@@ -200,7 +200,7 @@
   },
   "${ModID}:FlamingFlip": {
     "NAME": "Flaming Flip",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card. NL Draw !M! cards."
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card. NL Draw 1 card."
   },
   "${ModID}:BoxOfHavoc": {
     "NAME": "Box of Havoc",
@@ -245,11 +245,14 @@
   },
   "${ModID}:GoneFishing": {
     "NAME": "Gone Fishing",
-    "DESCRIPTION": "Gain 1 Intangible. NL Shuffle !M! ${ModID}:Fish into your draw pile. NL Exhaust."
+    "DESCRIPTION": "Gain 1 Intangible. NL Put !M! ${ModID}:Fish on top of your draw pile. NL Exhaust."
   },
   "${ModID}:ChocolateChipCookie": {
     "NAME": "Chocolate Chip Cookie",
-    "DESCRIPTION": "Heal !M! HP. NL Gain !${ModID}:m2! Dexterity. NL Upgrade all cards in your hand for the rest of combat. NL Exhaust."
+    "DESCRIPTION": "Heal !M! HP. NL Gain !${ModID}:m2! Dexterity. NL Upgrade all cards in your hand for the rest of combat. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "mmm..."
+    ]
   },
   "${ModID}:AnglerForm": {
     "NAME": "Angler Form",
@@ -303,7 +306,7 @@
   },
   "${ModID}:RodOfHope": {
     "NAME": "Rod of Hope",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Gain [E] [E] and draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Voyaged: Gain [E] and draw 1 card."
   },
   "${ModID}:Maw": {
     "NAME": "Maw",
@@ -353,7 +356,7 @@
   },
   "${ModID}:FastingB": {
     "NAME": "Fasting-B",
-    "DESCRIPTION": "Gain !M! Thorns. NL Gain !M! *Plated *Armor. NL Draw 1 less card at the start of each turn."
+    "DESCRIPTION": "Gain !M! Thorns. NL Gain !M! *Plated *Armor. NL At the start of your turn, discard 1 card."
   },
   "${ModID}:QuestTimeTheStorm": {
     "NAME": "The Storm",
@@ -362,11 +365,11 @@
   },
   "${ModID}:QuestTimeTheLuckyPack": {
     "NAME": "The Lucky Pack",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards in a turn. NL *Reward: Play the last card twice."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Quest: Play 3 ${ModID}:Foil cards in a turn. NL *Reward: Gain 3 *Plated *Armor."
   },
   "${ModID}:QuestTimeTheFishOPedia": {
     "NAME": "The Fish-O-Pedia",
-    "DESCRIPTION": "Deal !D! damage. Add 1 ${ModID}:Fish into your hand. NL ${ModID}:Quest: Play 5 different kinds of ${ModID}:Fish. NL *Reward: NL Gain 2 Strength.",
+    "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Quest: Play 4 different kinds of ${ModID}:Fish. NL *Reward: NL Gain 2 Strength.",
     "EXTENDED_DESCRIPTION": [
       "Choose a Fish."
     ]
@@ -407,7 +410,7 @@
   },
   "${ModID}:TheEternityGem": {
     "NAME": "The Eternity Gem",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage to a random enemy !M! times. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust."
   },
   "${ModID}:ShinyShots": {
     "NAME": "Shiny Shots",
